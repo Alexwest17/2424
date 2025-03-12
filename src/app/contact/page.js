@@ -8,7 +8,7 @@ const Home = () => {
   const [movies, setMovies] = useState([]);
 
   const handleSearch = async () => {
-    const response = await axios.get(`https://www.omdbapi.com/?apikey=YOUR_API_KEY&s=${searchTerm}`);
+    const response = await axios.get(`https://www.omdbapi.com/?apikey=a2b07930&s=${searchTerm}`);
     setMovies(response.data.Search || []);
   };
   
@@ -19,7 +19,7 @@ const Home = () => {
       <h1>Поиск фильмов</h1>
       <input
         type="text"
-        placeholder="Введите название фильма"
+        placeholder="saw"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
